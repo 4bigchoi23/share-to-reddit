@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon_x32.png">
+  <title>Share to Reddit</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/color.modes.js"></script>
+  <script src="js/settings.js"></script>
+</head>
+
+<body class="user-select-none">
+  <div class="container-fluid mb-5 bg-secondary-subtle">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <h1 class="display-5 fw-bold">Share to Reddit Settings</h1>
+          <p>This is where you can add or remove saved Reddit communities or change the keyboard shortcut. Your changes are saved automatically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- Add a community -->
+        <label for="reddit-server-text" class="form-label">Add a community</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="reddit-server-text" placeholder="r/test" aria-label="Reddit Community" aria-describedby="server-help">
+          <button class="btn btn-outline-primary w-25" type="button" id="server-add-btn">Submit</button>
+        </div>
+        <div id="server-help" class="form-text">This must be a communities running Reddit. ex) <code>r/test</code> or <code>u/user</code></div>
+        <!-- Saved communities -->
+        <div class="mt-3 mb-1">
+          <label for="reddit-server-list" class="form-label">Saved communities</label>
+          <select id="reddit-server-list" class="form-select" size="5" aria-label="Saved communities list"></select>
+        </div>
+        <button class="btn btn-outline-danger w-100 mb-3" type="button" id="server-remove-btn">Remove selected</button>
+        <!-- Other settings -->
+        <div class="mb-3">
+          <label class="form-label">Other settings</label>
+          <button type="button" class="btn btn-outline-info w-100" id="reddit-keyboard-shortcut">Change keyboard shortcut</button>
+          <div class="collapse mt-1" id="firefoxShortcutCollapse">
+            <div class="card card-body">
+              Open about:addons in a new tab, click the settings gear button, then select "Manage extension shortcuts."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

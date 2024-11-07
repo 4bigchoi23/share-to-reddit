@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon_x32.png">
+  <title>Share to Reddit</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/color.modes.js"></script>
+  <script src="js/share.js"></script>
+  <style>
+    .list-group-item svg,
+    .list-group-item img {
+      height: 1.5em;
+      width: 1.5em;
+      margin-right: 1em;
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body class="user-select-none">
+  <!-- UI for no communities saved -->
+  <div id="server-warning" class="container text-center p-5 d-none">
+    You need to <a href="#" class="extension-settings-link">add some community</a> first!
+  </div>
+  <!-- Server selection UI -->
+  <div id="server-list" class="list-group mb-2 list-group-flush border-bottom d-none">
+    <div class="list-group-item list-group-item-dark">
+      Select a community
+      <div class="float-end">
+        <a href="#" class="extension-settings-link">
+          Edit
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Initial loading UI -->
+  <div id="server-loading" class="text-center p-5 d-none">
+    <div class="spinner-border mb-3" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>The selected community is loading, please wait.</p>
+  </div>
+</body>
+
+</html>
